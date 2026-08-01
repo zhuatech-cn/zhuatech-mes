@@ -167,3 +167,9 @@ npm run dev:demo
 提交 Issue 或 Pull Request 前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 与 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。请勿提交真实工艺参数、生产订单、设备地址、追溯数据、账号密钥或个人信息。
 
 Copyright © 2026 上海如静知华信息科技有限公司。保留所有权利。
+
+## 节拍偏差在线分析
+
+新增车间接口 `POST /api/shopfloor/takt-analysis`，基于需求量、可用生产时间、实际周期和停机时间计算目标节拍、有效节拍与偏差率，并输出 `ON_TRACK / AT_RISK / BEHIND` 状态。出现落后时，返回停机复盘和瓶颈工序改善建议。
+
+该接口沿用操作员权限，600 件班次需求与 60 分钟停机的落后场景已通过集成测试。
