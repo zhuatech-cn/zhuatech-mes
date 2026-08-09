@@ -173,3 +173,7 @@ Copyright © 2026 上海如静知华信息科技有限公司。保留所有权�
 新增车间接口 `POST /api/shopfloor/takt-analysis`，基于需求量、可用生产时间、实际周期和停机时间计算目标节拍、有效节拍与偏差率，并输出 `ON_TRACK / AT_RISK / BEHIND` 状态。出现落后时，返回停机复盘和瓶颈工序改善建议。
 
 该接口沿用操作员权限，600 件班次需求与 60 分钟停机的落后场景已通过集成测试。
+
+## OEE 损失分析
+
+新增 `POST /api/mes/insights/oee-loss-analysis`，按可动率、性能效率和质量率计算 OEE，定位 `AVAILABILITY / PERFORMANCE / QUALITY` 最大损失项，并估算达到 85% 目标所需追回的生产分钟数。结果会按停机、降速或质量损失给出针对性改善动作。
