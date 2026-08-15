@@ -29,3 +29,7 @@ Copyright 2026 上海如静知华信息科技有限公司。
 ## 生产节拍分析
 
 `POST /api/shopfloor/takt-analysis`：计算目标节拍、扣除停机后的有效节拍、实际偏差和车间改善动作。
+
+## 制程质量漂移
+
+`POST /api/mes/insights/quality-drift`：依据合格率变化、连续偏差、刀具寿命、参数偏离和样本量返回漂移分、生产决策与处置动作。

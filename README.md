@@ -181,3 +181,7 @@ Copyright © 2026 上海如静知华信息科技有限公司。保留所有权�
 ## OEE 损失分析
 
 新增 `POST /api/mes/insights/oee-loss-analysis`，按可动率、性能效率和质量率计算 OEE，定位 `AVAILABILITY / PERFORMANCE / QUALITY` 最大损失项，并估算达到 85% 目标所需追回的生产分钟数。结果会按停机、降速或质量损失给出针对性改善动作。
+
+## 制程质量漂移
+
+`POST /api/mes/insights/quality-drift` 比较基线与当前合格率，并结合连续偏差、刀具寿命、工艺参数偏离和样本量输出继续、复核或停机检查决策，让质量趋势在形成批量不良前进入处置队列。
