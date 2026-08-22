@@ -1,5 +1,5 @@
 <script setup>
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 import AppIcon from './AppIcon.vue';import {useAuthStore} from '../stores/auth';import {useRouter} from 'vue-router'
 const props=defineProps({mode:{type:String,default:'admin'}});const auth=useAuthStore(),router=useRouter()
 const shopfloor=[['/shopfloor','home','班组工作台'],['/shopfloor/report','report','生产报工'],['/shopfloor/tasks','order','工序任务'],['/shopfloor/material','box','物料领用'],['/shopfloor/quality','quality','质量自检'],['/shopfloor/andon','risk','异常呼叫']]

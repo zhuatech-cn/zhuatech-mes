@@ -1,3 +1,3 @@
-/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. */
+/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ */
 package cn.zhuatech.mes.controller; import cn.zhuatech.mes.common.ApiResponse; import cn.zhuatech.mes.dto.MesDto.*; import cn.zhuatech.mes.service.MesService; import org.springframework.security.access.prepost.PreAuthorize; import org.springframework.web.bind.annotation.*; import java.util.List;
 @RestController @RequestMapping("/api/admin") @PreAuthorize("hasAnyRole('PLANNER','QUALITY','ADMIN')") public class ManufacturingAdminController {private final MesService mes;public ManufacturingAdminController(MesService mes){this.mes=mes;}@GetMapping("/dashboard") public ApiResponse<Dashboard> dashboard(){return ApiResponse.ok(mes.adminDashboard());}@GetMapping("/work-orders") public ApiResponse<List<WorkOrderView>> orders(){return ApiResponse.ok(mes.workOrders());}}
