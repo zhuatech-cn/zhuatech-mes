@@ -23,3 +23,9 @@ app:
     expiration: PT12H
   cors:
     allowed-origins: ${CORS_ORIGINS:http://localhost:5173,http://localhost:8090}
+zhuatech:
+  ai:
+    provider: ${ZHUATECH_AI_PROVIDER:local}
+    base-url: ${ZHUATECH_AI_BASE_URL:https://api.deepseek.com}
+    model: ${ZHUATECH_AI_MODEL:deepseek-chat}
+    api-key: ${ZHUATECH_AI_API_KEY:}
