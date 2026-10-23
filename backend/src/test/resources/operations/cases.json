@@ -1,0 +1,67 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "REVIEW",
+      "finalGoodQty": "#960",
+      "pendingQty": "#20"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "requiredGood": "961"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "deliveryGap": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "firstPass": "920",
+      "recovered": "60"
+    },
+    "expected": {
+      "decision": "PASS",
+      "pendingQty": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "firstPass": "921",
+      "recovered": "60"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "yieldFloor": "90",
+      "scrapped": "40"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "inputQty": "0"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "recovered": "0"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "finalGoodQty": "#900"
+    },
+    "error": false
+  }
+]
